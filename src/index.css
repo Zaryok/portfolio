@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-slate-900 text-gray-100;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Base section styles */
+section {
+  @apply min-h-screen w-full py-24 px-4 relative;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Utility classes */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Card styles */
+.card {
+  @apply bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm 
+         transition-all duration-300 hover:bg-slate-800/70 
+         active:bg-slate-800/70
+         hover:transform hover:scale-105
+         active:transform active:scale-105
+         touch-manipulation;
+}
+
+/* Skill badge */
+.skill-badge {
+  @apply bg-slate-900/50 px-3 py-1 rounded-full text-sm 
+         text-gray-300 hover:bg-purple-500/20 
+         active:bg-purple-500/20
+         transition-colors duration-300;
+}
+
+/* Project card */
+.project-card {
+  @apply bg-slate-800/50 rounded-xl overflow-hidden 
+         backdrop-blur-sm transition-all duration-300
+         hover:transform hover:scale-105
+         active:transform active:scale-105
+         touch-manipulation;
+}
+
+/* Particles container */
+#particles-js {
+  @apply absolute inset-0 z-0;
+}
+
+/* Content wrapper */
+.content-wrapper {
+  @apply relative z-10 max-w-7xl mx-auto;
+}
+
+/* Mobile optimizations */
+@media (hover: none) {
+  .card,
+  .project-card,
+  .skill-badge {
+    @apply hover:transform-none hover:scale-100;
+  }
+}
