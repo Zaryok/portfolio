@@ -43,14 +43,14 @@ const HomePage = () => {
 
   const handleDownloadCV = () => {
     // Create a blob URL for the PDF file
-    fetch('/ZaryabCV.pdf')
+    fetch('/Zaryab-Ahmar-CV.pdf')
       .then(response => response.blob())
       .then(blob => {
         // Create a blob URL
         const url = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', 'ZaryabCV.pdf');
+        link.setAttribute('download', 'Zaryab-Ahmar-CV.pdf');
         document.body.appendChild(link);
         link.click();
         // Clean up
