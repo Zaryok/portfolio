@@ -43,7 +43,7 @@ const HomePage = () => {
 
   const handleDownloadCV = () => {
     // Create a blob URL for the PDF file
-    fetch('/cv/Zaryab_Ahmar_CV.pdf')
+    fetch('/Zaryab_CV.pdf')
       .then(response => response.blob())
       .then(blob => {
         // Create a blob URL
