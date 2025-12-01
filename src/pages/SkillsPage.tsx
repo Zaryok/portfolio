@@ -1,6 +1,8 @@
 import React from 'react';
 import { Code2, Globe, Database, Server } from 'lucide-react';
 
+// Updated skills section with modern tech stack
+
 const SkillsPage = () => {
   const skills = {
     frontend: [
