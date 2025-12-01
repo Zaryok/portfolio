@@ -3,19 +3,18 @@ import { Code2, Globe, Database, Server } from 'lucide-react';
 
 const SkillsPage = () => {
   const skills = {
-    languages: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "TypeScript",
-      "Python",
-      "Java"
-    ],
     frontend: [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "React.js",
-      "Tailwind CSS",
-      "Responsive Design",
-      "UI/UX Design"
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    backend: [
+      "Node.js",
+      "MongoDB",
+      "SQL"
     ],
     tools: [
       "Git & GitHub",
@@ -38,11 +37,11 @@ const SkillsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
             <div className="card">
               <div className="flex items-center justify-center mb-6">
-                <Server className="w-10 h-10 text-purple-400" />
+                <Globe className="w-10 h-10 text-purple-400" />
               </div>
-              <h3 className="text-2xl font-semibold text-white text-center mb-6">Programming Languages</h3>
+              <h3 className="text-2xl font-semibold text-white text-center mb-6">Frontend Development</h3>
               <div className="flex flex-wrap gap-2">
-                {skills.languages.map((skill) => (
+                {skills.frontend.map((skill) => (
                   <span key={skill} className="skill-badge">
                     {skill}
                   </span>
@@ -52,11 +51,11 @@ const SkillsPage = () => {
 
             <div className="card">
               <div className="flex items-center justify-center mb-6">
-                <Globe className="w-10 h-10 text-purple-400" />
+                <Server className="w-10 h-10 text-purple-400" />
               </div>
-              <h3 className="text-2xl font-semibold text-white text-center mb-6">Frontend Development</h3>
+              <h3 className="text-2xl font-semibold text-white text-center mb-6">Backend & Database</h3>
               <div className="flex flex-wrap gap-2">
-                {skills.frontend.map((skill) => (
+                {skills.backend.map((skill) => (
                   <span key={skill} className="skill-badge">
                     {skill}
                   </span>
